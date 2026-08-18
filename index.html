@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Memory Card Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Animated background images -->
+
+    <img class="background-shape" src="images/circle.png" style="left: 5%; width: 45px; animation-duration: 9s;" />
+    <img class="background-shape" src="images/diamond.png" style="left: 15%; width: 60px; animation-duration: 12s; animation-delay: 2s;" />
+    <img class="background-shape" src="images/flower.png" style="left: 25%; width: 50px; animation-duration: 10s; animation-delay: 4s;" />
+    <img class="background-shape" src="images/heart.png" style="left: 35%; width: 45px; animation-duration: 8s; animation-delay: 1s;" />
+    <img class="background-shape" src="images/hexagon.png" style="left: 45%; width: 55px; animation-duration: 11s; animation-delay: 3s;" />
+    <img class="background-shape" src="images/moon.png" style="left: 55%; width: 50px; animation-duration: 9s; animation-delay: 5s;" />
+    <img class="background-shape" src="images/spade.png" style="left: 65%; width: 45px; animation-duration: 13s; animation-delay: 2s;" />
+    <img class="background-shape" src="images/square.png" style="left: 75%; width: 55px; animation-duration: 10s; animation-delay: 4s;" />
+    <img class="background-shape" src="images/star.png" style="left: 85%; width: 50px; animation-duration: 8s; animation-delay: 1s;" />
+    <img class="background-shape" src="images/triangle.png" style="left: 95%; width: 55px; animation-duration: 12s; animation-delay: 3s;" />
+
+    <h1>Memory Card Game</h1>
+    
+
+    <div class="game-info">
+      <div class="info-box">
+        <span class="info-label">Moves</span>
+        <span id="moves">0</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Time</span>
+        <span id="timer">00:00</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Pairs</span>
+        <span><span id="pairs">0</span>/10</span>
+      </div>
+    </div>
+
+    <div id="game-board">
+      <div class="card">
+        <span>?</span>
+        <img src="images/circle.png" alt="Circle" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/circle.png" alt="Circle" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/diamond.png" alt="Diamond" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/diamond.png" alt="Diamond" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/flower.png" alt="Flower" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/flower.png" alt="Flower" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/heart.png" alt="Heart" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/heart.png" alt="Heart" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/hexagon.png" alt="Hexagon" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/hexagon.png" alt="Hexagon" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/moon.png" alt="Moon" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/moon.png" alt="Moon" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/spade.png" alt="Spade" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/spade.png" alt="Spade" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/square.png" alt="Square" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/square.png" alt="Square" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/star.png" alt="Star" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/star.png" alt="Star" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/triangle.png" alt="Triangle" />
+      </div>
+
+      <div class="card">
+        <span>?</span>
+        <img src="images/triangle.png" alt="Triangle" />
+      </div>
+    </div>
+
+    <!-- WIN SCREEN -->
+
+    <div id="win-screen">
+      <div id="win-box">
+        <h2>You Won!</h2>
+
+        <button id="restart-button">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
