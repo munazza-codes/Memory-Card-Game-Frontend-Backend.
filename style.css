@@ -3,13 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   text-align: center;
   overflow-x: hidden;
-
   background:
     radial-gradient(
       circle at 20% 20%,
@@ -22,15 +20,9 @@ body {
       transparent 25%
     ),
     linear-gradient(135deg, #16002e, #31005c, #001d4d);
-
   color: white;
   position: relative;
 }
-
-/* =========================
-   GLOWING BACKGROUND
-========================= */
-
 body::before,
 body::after {
   content: "";
@@ -70,11 +62,6 @@ body::after {
     transform: translate(-50px, 80px);
   }
 }
-
-/* =========================
-   WHITE GLITTER
-========================= */
-
 body {
   background-image:
     radial-gradient(circle, white 1px, transparent 1.5px),
@@ -102,7 +89,6 @@ body {
 
   animation: glitterMove 8s linear infinite;
 }
-
 @keyframes glitterMove {
   0% {
     background-position:
@@ -113,7 +99,6 @@ body {
       0 0,
       0 0;
   }
-
   50% {
     background-position:
       60px 100px,
@@ -123,7 +108,6 @@ body {
       0 0,
       0 0;
   }
-
   100% {
     background-position:
       120px 0,
@@ -135,10 +119,6 @@ body {
   }
 }
 
-/* =========================
-   TITLE
-========================= */
-
 h1 {
   margin-top: 40px;
   font-size: 48px;
@@ -149,21 +129,11 @@ h1 {
     0 0 20px #ff4fd8,
     0 0 40px #8a5cff;
 }
-
-/* =========================
-   WIN SCREEN TEXT
-========================= */
-
 #win-box p {
   margin-top: 15px;
   font-size: 22px;
   font-weight: bold;
 }
-
-/* =========================
-   MOVES
-========================= */
-
 #moves {
   color: white;
 
@@ -171,11 +141,6 @@ h1 {
     0 0 8px #00eaff,
     0 0 15px #00eaff;
 }
-
-/* =========================
-   GAME BOARD
-========================= */
-
 #game-board {
   width: 850px;
   max-width: 90%;
@@ -189,11 +154,6 @@ h1 {
   position: relative;
   z-index: 2;
 }
-
-/* =========================
-   CARD
-========================= */
-
 .card {
   height: 150px;
 
@@ -226,11 +186,6 @@ h1 {
     transform 0.35s ease,
     box-shadow 0.35s ease;
 }
-
-/* =========================
-   CARD BACK DESIGN
-========================= */
-
 .card span {
   width: 75px;
   height: 75px;
@@ -282,10 +237,6 @@ h1 {
   }
 }
 
-/* =========================
-   CARD SHINE
-========================= */
-
 .card::before {
   content: "";
 
@@ -312,10 +263,6 @@ h1 {
   transform: rotate(25deg) translateX(180px);
 }
 
-/* =========================
-   CARD HOVER
-========================= */
-
 .card:hover {
   transform: translateY(-8px) scale(1.04);
 
@@ -324,10 +271,6 @@ h1 {
     0 0 25px rgba(255, 80, 220, 0.5),
     0 0 40px rgba(0, 220, 255, 0.25);
 }
-
-/* =========================
-   SHAPES
-========================= */
 
 .card img {
   width: 90px;
@@ -348,28 +291,19 @@ h1 {
     transform: scale(0) rotate(-180deg);
     opacity: 0;
   }
-
   100% {
     transform: scale(1) rotate(0);
     opacity: 1;
   }
 }
-
-/* =========================
-   MATCHED CARDS
-========================= */
-
 .card.matched {
   border-color: white;
-
   box-shadow:
     0 0 15px white,
     0 0 30px #ff4fd8,
     0 0 45px #00eaff;
-
   animation: matchedGlow 1.5s infinite alternate;
 }
-
 @keyframes matchedGlow {
   from {
     transform: scale(1);
@@ -379,33 +313,21 @@ h1 {
     transform: scale(1.04);
   }
 }
-
-/* =========================
-   FLOATING BACKGROUND SHAPES
-========================= */
-
 .background-shape {
   position: fixed;
-
   z-index: -1;
-
   pointer-events: none;
-
   opacity: 0.35;
-
   filter: drop-shadow(0 0 8px white)
     drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 
   animation: floatingShape linear infinite;
 }
-
 @keyframes floatingShape {
   0% {
     transform: translateY(110vh) rotate(0deg);
-
     opacity: 0;
   }
-
   10% {
     opacity: 0.4;
   }
@@ -424,16 +346,10 @@ h1 {
     opacity: 0;
   }
 }
-
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 700px) {
   h1 {
     font-size: 34px;
   }
-
   #game-board {
     grid-template-columns: repeat(2, 1fr);
     width: 95%;
@@ -442,7 +358,6 @@ h1 {
   .card {
     height: 130px;
   }
-
   .card img {
     width: 70px;
     height: 70px;
@@ -451,52 +366,32 @@ h1 {
 #restart-button {
   margin-top: 28px;
   padding: 13px 34px;
-
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 14px;
-
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
-
   color: white;
-
   font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.5px;
-
   cursor: pointer;
-
   backdrop-filter: blur(10px);
-
   box-shadow:
     0 5px 20px rgba(0, 0, 0, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.2);
-
   transition: all 0.3s ease;
 }
-
 #restart-button:hover {
   background: linear-gradient(135deg, #6366f1, #9333ea);
-
   border-color: rgba(255, 255, 255, 0.8);
-
   transform: translateY(-3px);
 
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.35),
     0 0 15px rgba(255, 79, 216, 0.35);
 }
-
 #restart-button:active {
   transform: translateY(0);
 }
-
-/* =========================
-   GAME INFO
-========================= */
-
-/* =========================
-   GAME INFO
-========================= */
 
 .game-info {
   display: flex;
@@ -556,44 +451,25 @@ h1 {
 #pairs {
   color: #ff8de7;
 }
-/* =========================
-   MATCH SUCCESS EFFECT
-========================= */
-
 .card.match-pop {
   animation:
     matchedGlow 1.5s infinite alternate,
     matchPop 0.6s ease;
 }
-
 @keyframes matchPop {
   0% {
     transform: scale(1);
   }
-
   35% {
     transform: scale(1.18);
   }
-
   60% {
     transform: scale(0.96);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
-/* =========================
-   START BUTTON
-========================= */
-/* =========================
-   WIN SCREEN
-========================= */
-/* =========================
-   WIN SCREEN
-========================= */
-
 #win-screen {
   display: none;
 
